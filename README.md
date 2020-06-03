@@ -15,7 +15,7 @@
     - note that service recovers very fast (less than 1s)
 7. Go to Grafana->Containers uptime dashboard to verify that panel is (or was) in Alerting state
 8. Repeat step 5 to check if service has recovered
-9. Repeat steps 6 and 8 to verify behavior multiple times
+9. Repeat steps 6-8 to verify behavior multiple times
 
 ## Note
 Dashboard panel will be alerting if container uptime is less than 10 seconds.
