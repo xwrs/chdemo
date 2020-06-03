@@ -11,7 +11,8 @@ func main() {
 		fmt.Fprintf(w, "Hello World!")
 	})
 	http.HandleFunc("/api/down", func(w http.ResponseWriter, r *http.Request) {
-		os.Exit(1)
+		fmt.Fprintf(w, "Shutting down!")
+		go os.Exit(1)
 	})
 	fmt.Println("Service started")
 	http.ListenAndServe(":80", nil)
