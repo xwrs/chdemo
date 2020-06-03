@@ -12,6 +12,7 @@
     - running `curl http://localhost:8090` should return `Hello World!`. If this is the case then custom service is up and running
 6. Trigger shutdown of the service by calling `\api\down` endpoint:
     - `curl http://localhost:8090/api/down`
+    - note that service recovers very fast (less than 1s)
 7. Go to Grafana->Containers uptime dashboard to verify that panel is (or was) in Alerting state
 8. Repeat step 5 to check if service has recovered
 9. Repeat steps 6 and 8 to verify behavior multiple times
