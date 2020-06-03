@@ -17,6 +17,8 @@
 9. Repeat steps 6 and 8 to verify behavior multiple times
 
 ## Note
+Dashboard panel will be alerting if container uptime is less than 10 seconds.
+
 Container uptime metric was chosen in favor to container status to capture even fastest restarts. Current implementation of custom service recovers in less than 1s, so Telegraf is not able top capture `restarting` state. Task was completed using Docker Input Plugin.
 
 In real life I would rather use synthetic monitoring of health endpoints to have more control over how data is stored to the metric storage as Docker Input Plugin has it's own limitations
