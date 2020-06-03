@@ -15,3 +15,8 @@
 7. Go to Grafana->Containers uptime dashboard to verify that panel is (or was) in Alerting state
 8. Repeat step 5 to check if service has recovered
 9. Repeat steps 6 and 8 to verify behavior multiple times
+
+## Note
+Container uptime metric was chosen in favor to container status to capture even fastest restarts. Current implementation of custom service recovers in less than 1s, so Telegraf is not able top capture `restarting` state. Task was completed using Docker Input Plugin.
+
+In real life I would rather use synthetic monitoring of health endpoints to have more control over how data is stored to the metric storage as Docker Input Plugin has it's own limitations
