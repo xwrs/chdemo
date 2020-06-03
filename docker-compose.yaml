@@ -9,7 +9,7 @@ services:
     container_name: custom-service
     restart: always
     ports:
-      - 80:80
+      - 8090:80
     networks:
       - monitoring
 
